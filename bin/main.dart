@@ -1,9 +1,8 @@
-// Abstract class for Role
+
 abstract class Role {
   void displayRole();
 }
 
-// Class Person implementing Role
 class Person implements Role {
   String name;
   int age;
@@ -13,7 +12,7 @@ class Person implements Role {
 
   @override
   void displayRole() {
-    // To be overridden by subclasses
+
   }
 
   String getName() => name;
@@ -21,7 +20,6 @@ class Person implements Role {
   String getAddress() => address;
 }
 
-// Student class extending Person
 class Student extends Person {
   String studentID;
   String grade;
@@ -47,7 +45,6 @@ class Student extends Person {
   }
 }
 
-// Teacher class extending Person
 class Teacher extends Person {
   String teacherID;
   List<String> coursesTaught;
@@ -73,10 +70,8 @@ class Teacher extends Person {
   }
 }
 
-// Student Management System class
 class StudentManagementSystem {
   static void main() {
-    // Create a student instance
     Student student = Student(
       name: "John Doe",
       age: 20,
@@ -86,7 +81,6 @@ class StudentManagementSystem {
       courseScores: [90, 85, 82],
     );
 
-    // Display student information
     print("Student Information:\n");
     student.displayRole();
     print("Name: ${student.getName()}");
@@ -94,7 +88,6 @@ class StudentManagementSystem {
     print("Address: ${student.getAddress()}");
     print("Average Score: ${student.calculateAverageScore().toStringAsFixed(1)}\n");
 
-    // Create a teacher instance
     Teacher teacher = Teacher(
       name: "Mrs. Smith",
       age: 35,
@@ -103,7 +96,6 @@ class StudentManagementSystem {
       coursesTaught: ["Math", "English", "Bangla"],
     );
 
-    // Display teacher information
     print("Teacher Information:\n");
     teacher.displayRole();
     print("Name: ${teacher.getName()}");
@@ -113,7 +105,6 @@ class StudentManagementSystem {
   }
 }
 
-// Entry point
 void main() {
   StudentManagementSystem.main();
 }
